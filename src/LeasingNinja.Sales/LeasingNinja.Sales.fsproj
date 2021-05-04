@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="Domain\Contract.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="NMolecules.DDD" Version="0.1.0">
+        <GeneratePathProperty></GeneratePathProperty>
+      </PackageReference>
+    </ItemGroup>
+</Project>
