@@ -47,7 +47,7 @@ type SignedContract =
         lessee: Customer
         car: Car
         price: Amount
-        
+
         //public SignDate SignDate { get; private set; }
         signDate: SignDate
     }
@@ -60,14 +60,14 @@ module Contract =
            | SignedContract of SignedContract
 
     type SignContract = UnsignedContract -> SignDate -> SignedContract
-    
+
     //let sign contract signDate: UnsignedContract =
     let signContract : SignContract =
         fun unsignedContract signDate ->
-            
+
             let contractNumber =
                 unsignedContract.number
                 |> ContractNumber.create
-            
+
             let result = SignedContract with contract
             result
