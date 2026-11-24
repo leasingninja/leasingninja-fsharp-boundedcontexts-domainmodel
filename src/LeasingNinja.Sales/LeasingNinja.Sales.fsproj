@@ -9,7 +9,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="NMolecules.DDD" Version="0.1.0">
+      <PackageReference Include="NMolecules.DDD" Version="0.2.2">
         <GeneratePathProperty></GeneratePathProperty>
       </PackageReference>
     </ItemGroup>
