@@ -1,0 +1,23 @@
+name: LeasingNinja in F# – CI
+
+on: [ push,  pull_request ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-26.04
+
+    steps:
+    - name: Checkout source code
+      uses: actions/checkout@v7
+
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v6
+      with:
+        dotnet-version: '11.0.x'
+
+    - name: Install dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
